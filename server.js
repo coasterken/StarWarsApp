@@ -76,11 +76,11 @@ app.post("/api/new", function(req, res) {
   var newcharacter = req.body;
   newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
 
-  console.log(newcharacter);
+  console.log("new char" + newcharacter);
 
   characters.push(newcharacter);
-
-  res.json(newcharacter);
+  res.send("waitlist");
+ // res.json(newcharacter);
 });
 
 // Starts the server to begin listening
